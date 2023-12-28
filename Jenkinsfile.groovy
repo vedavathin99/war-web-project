@@ -2,7 +2,7 @@ node
 {
 	    stage('checkout') 
             {
-                    git branch: 'master', url: 'https://github.com/Yashwinrajs/tomcat-project.git'
+                    git branch: 'master', url: ''https://github.com/vedavathin99/war-web-project.git'
             }
 
             stage('Build') 
@@ -16,7 +16,7 @@ node
         
             stage('Deploy') 
             {
-                    sh 'sudo cp /home/ec2-user/workspace/demo-Tomcat/target/TomcatMavenApp-2.0.war /home/ec2-user/tomcat/webapps'
+                    sh 'sudo cp /home/ec2-user/tomcat/workspace/pipeline-1/target/wwp-1.0.0.war /home/ec2-user/apache-tomcat-9.0.84/webapps'
             }
     }
 }
