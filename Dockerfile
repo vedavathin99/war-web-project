@@ -1,6 +1,6 @@
 FROM ubuntu as build1
 RUN apt update -y && apt install git -y
-
+RUN git clone https://github.com/vedavathin99/war-web-project.git
 
 FROM maven:amazoncorretto as build2
 WORKDIR /app
